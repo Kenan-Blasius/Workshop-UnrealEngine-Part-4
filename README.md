@@ -6,7 +6,7 @@ Bienvenue dans ce workshop UnrealEngine.
 
 Dans ce workshop, nous allons apprendre utiliser le Blueprint, le langage de programmation visuel d'UnrealEngine.
 
-Pour cela, nous allons créer une lampe que nous pourrons allumer et éteindre ainsi qu'une possibilité pour notre joueur de s'accroupir et courir.
+Pour cela, nous allons créer une lampe que nous pourrons allumer et éteindre ainsi qu'une possibilité pour notre joueur de courir.
 
 Ce workshop est découpé en 4 parties :
 
@@ -121,3 +121,46 @@ Quand à votre `Left MouseButton`, il doit ressembler à ça :
 ![image](assets/LeftMouseButton.png)
 
 Et voilà, vous avez créé votre lampe interactive.
+
+## Création de la possibilité de courir
+
+Maintenant que nous avons créé notre lampe interactive, nous allons créer la possibilité pour notre joueur de courir.
+
+Pour cela, rendez-vous dans le dossier `All/Content/ThirdPerson/Blueprints` et ouvrez `BP_ThirdPersonCharacter`.
+
+Mais avant d'aller plus loin, nous allons dire à UnrealEngine d'ajouter une touche pour un évènement `Sprint`.
+
+Pour cela, rendez-vous dans `All/Content/ThirdPerson/Input/Actions` et ajoutez un `Input` > `Input Action` et nommez-le `IA_Sprint` et laissez les valeurs par défaut.
+
+Ensuite rendez-vous dans `All/Content/ThirdPerson/Input` et ouvrez `IMC_Default`, ajoutez un `Mappings` et sélectionnez `IA_Sprint`, déroulez votre `IA_Sprint` et définissez la touche que vous voulez pour l'évènement `Sprint`.
+
+![image](assets/Sprint.png)
+
+Maintenant, retournez dans `BP_ThirdPersonCharacter` et ajoutez un `EnhancedInputAction IA_Sprint` dans votre `Event Graph`.
+
+Déroullez votre `EnhancedInputAction IA_Sprint` :
+
+- Ajoutez un `Set Max Walk Speed` depuis `Started` et définissez la vitesse de course à la variable `Walk Speed` (que vous créez vous même) * `1.5`.
+- Ajoutez un `Set Max Walk Speed` depuis `Completed` et définissez la vitesse de marche à la variable `Walk Speed`.
+
+Pensez à reliez la `Target` de votre `Set Max Walk Speed` au `Character Movement` de votre `Event Graph`.
+
+![image](assets/Sprint2.png)
+
+Maintenant, nous allons définir la valeur notre variable `Walk Speed`.
+
+Pour cela, trouvez l'event `Event BeginPlay` et ajoutez un `Set` à votre variable `Walk Speed` et définissez sa valeur à `Character Movement` > `Max Walk Speed`.
+
+![image](assets/WalkSpeed.png)
+
+Et voilà, vous avez créé la possibilité pour votre joueur de courir.
+
+Vous pouvez maintenant tester votre jeu et voir le résultat.
+
+## Conclusion
+
+Vous avez maintenant les bases du Blueprint et vous pouvez créer des interactions entre votre joueur et votre environnement.
+
+Vous pouvez maintenant créer votre propre jeu.
+
+Si vous souhaitez aller plus loin, vous pouvez essayer de permettre à votre joueur de s'accroupir tout en modifiant sa vitesse de marche et ses animations.
