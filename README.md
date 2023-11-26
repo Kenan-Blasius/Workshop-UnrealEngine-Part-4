@@ -53,7 +53,7 @@ Ajoutez ensuite des `Print String` dans ces deux events afin de pouvoir voir qua
 >
 > Pour rendre cela plus lisible, rendez-vous dans `Outliner` et cliquez sur votre théière et à gauche vous aurrez un petit oeil, cliquez dessus pour le cacher.
 >
-> Ne vous inquitez pas, cela ne cache pas votre théièredans le jeu mais uniquement dans l'éditeur.
+> Ne vous inquitez pas, cela ne cache pas votre théière dans le jeu mais uniquement dans l'éditeur.
 >
 > ![image](assets/HideTeapot.png)
 
