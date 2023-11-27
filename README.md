@@ -147,7 +147,7 @@ Pensez à reliez la `Target` de votre `Set Max Walk Speed` au `Character Movemen
 
 ![image](assets/Sprint2.png)
 
-Maintenant, nous allons définir la valeur notre variable `Walk Speed`.
+Maintenant, nous allons définir la valeur de notre variable `Walk Speed`.
 
 Pour cela, trouvez l'event `Event BeginPlay` et ajoutez un `Set` à votre variable `Walk Speed` et définissez sa valeur à `Character Movement` > `Max Walk Speed`.
 
@@ -163,4 +163,4 @@ Vous avez maintenant les bases du Blueprint et vous pouvez créer des interactio
 
 Vous pouvez maintenant créer votre propre jeu.
 
-Si vous souhaitez aller plus loin, vous pouvez essayer de permettre à votre joueur de s'accroupir tout en modifiant sa vitesse de marche et ses animations.
+Si vous souhaitez aller plus loin, vous pouvez essayer de permettre à votre joueur de s'accroupir (tout en modifiant sa vitesse de marche et ses animations).
